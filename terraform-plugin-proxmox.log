@@ -1,0 +1,1436 @@
+[90mWed, 21 Aug 2024 13:47:05 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:47:05 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:47:13 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:47:13 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:47:15 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:47:15 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:47:15 [DEBUG] setting computed for "smbios" from ComputedKeys
+2024/08/21 13:47:15 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+[90mWed, 21 Aug 2024 13:47:15 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:850[0m[36m >[0m [1mVM creation[0m [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+[90mWed, 21 Aug 2024 13:47:15 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:851[0m[36m >[0m VM creation resource data: '' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:47:15 [DEBUG][QemuVmCreate] checking for duplicate name: terraform-test-vm
+2024/08/21 13:47:15 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:47:15 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:47:15 GMT
+Expires: Wed, 21 Aug 2024 20:47:15 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"vmid":8000,"template":1,"diskread":0,"cpu":0,"disk":0,"maxcpu":2,"maxdisk":3758096384,"netout":0,"type":"qemu","maxmem":2147483648,"diskwrite":0,"name":"ubuntu-cloud","status":"stopped","mem":0,"id":"qemu/8000","uptime":0,"node":"pve","netin":0}]}
+2024/08/21 13:47:15 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:47:15 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:47:15 GMT
+Expires: Wed, 21 Aug 2024 20:47:15 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/08/21 13:47:15 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:47:15 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:47:15 GMT
+Expires: Wed, 21 Aug 2024 20:47:15 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"mem":0,"status":"stopped","name":"ubuntu-cloud","id":"qemu/8000","uptime":0,"node":"pve","netin":0,"template":1,"vmid":8000,"cpu":0,"diskread":0,"disk":0,"maxcpu":2,"maxdisk":3758096384,"diskwrite":0,"maxmem":2147483648,"type":"qemu","netout":0}]}
+2024/08/21 13:47:15 [DEBUG][QemuVmCreate] cloning VM
+[90mWed, 21 Aug 2024 13:47:15 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1005[0m[36m >[0m Cloning VM [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:47:15 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/qemu/8000/clone HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 61
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+full=1&name=terraform-test-vm&newid=100&pool=pool0&target=pve
+2024/08/21 13:47:15 <<<<<<<<<< RESULT:
+HTTP/1.1 403 Permission check failed (pool 'pool0' does not exist)
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:47:15 GMT
+Expires: Wed, 21 Aug 2024 20:47:15 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+[90mWed, 21 Aug 2024 13:48:27 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:48:27 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:48:29 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:48:29 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:48:29 [DEBUG] setting computed for "smbios" from ComputedKeys
+2024/08/21 13:48:29 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+[90mWed, 21 Aug 2024 13:48:29 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:850[0m[36m >[0m [1mVM creation[0m [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+[90mWed, 21 Aug 2024 13:48:29 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:851[0m[36m >[0m VM creation resource data: '' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:48:29 [DEBUG][QemuVmCreate] checking for duplicate name: terraform-test-vm
+2024/08/21 13:48:29 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:48:29 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:29 GMT
+Expires: Wed, 21 Aug 2024 20:48:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxcpu":2,"maxdisk":3758096384,"netout":0,"type":"qemu","maxmem":2147483648,"diskwrite":0,"template":1,"vmid":8000,"diskread":0,"cpu":0,"disk":0,"node":"pve","uptime":0,"netin":0,"name":"ubuntu-cloud","status":"stopped","mem":0,"id":"qemu/8000"}]}
+2024/08/21 13:48:29 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:48:29 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:29 GMT
+Expires: Wed, 21 Aug 2024 20:48:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/08/21 13:48:29 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:48:29 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:29 GMT
+Expires: Wed, 21 Aug 2024 20:48:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxmem":2147483648,"diskwrite":0,"netout":0,"type":"qemu","maxdisk":3758096384,"maxcpu":2,"cpu":0,"diskread":0,"disk":0,"vmid":8000,"template":1,"netin":0,"uptime":0,"node":"pve","id":"qemu/8000","status":"stopped","mem":0,"name":"ubuntu-cloud"}]}
+2024/08/21 13:48:29 [DEBUG][QemuVmCreate] cloning VM
+[90mWed, 21 Aug 2024 13:48:29 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1005[0m[36m >[0m Cloning VM [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:48:29 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/qemu/8000/clone HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 63
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+full=1&name=terraform-test-vm&newid=100&pool=colegio&target=pve
+2024/08/21 13:48:29 <<<<<<<<<< RESULT:
+HTTP/1.1 403 Permission check failed (pool 'colegio' does not exist)
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:29 GMT
+Expires: Wed, 21 Aug 2024 20:48:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+[90mWed, 21 Aug 2024 13:48:39 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:48:39 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:48:40 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:48:40 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:48:41 [DEBUG] setting computed for "smbios" from ComputedKeys
+2024/08/21 13:48:41 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+[90mWed, 21 Aug 2024 13:48:41 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:850[0m[36m >[0m [1mVM creation[0m [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+[90mWed, 21 Aug 2024 13:48:41 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:851[0m[36m >[0m VM creation resource data: '' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:48:41 [DEBUG][QemuVmCreate] checking for duplicate name: terraform-test-vm
+2024/08/21 13:48:41 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:48:41 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:41 GMT
+Expires: Wed, 21 Aug 2024 20:48:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"uptime":0,"node":"pve","netin":0,"status":"stopped","mem":0,"name":"ubuntu-cloud","id":"qemu/8000","maxcpu":2,"maxdisk":3758096384,"maxmem":2147483648,"diskwrite":0,"netout":0,"type":"qemu","template":1,"vmid":8000,"diskread":0,"cpu":0,"disk":0}]}
+2024/08/21 13:48:41 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:48:41 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:41 GMT
+Expires: Wed, 21 Aug 2024 20:48:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/08/21 13:48:41 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:48:41 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:41 GMT
+Expires: Wed, 21 Aug 2024 20:48:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"id":"qemu/8000","name":"ubuntu-cloud","status":"stopped","mem":0,"netin":0,"uptime":0,"node":"pve","diskread":0,"disk":0,"cpu":0,"vmid":8000,"template":1,"netout":0,"type":"qemu","diskwrite":0,"maxmem":2147483648,"maxcpu":2,"maxdisk":3758096384}]}
+2024/08/21 13:48:41 [DEBUG][QemuVmCreate] cloning VM
+[90mWed, 21 Aug 2024 13:48:41 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1005[0m[36m >[0m Cloning VM [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:48:41 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/qemu/8000/clone HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 59
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+full=1&name=terraform-test-vm&newid=100&pool=pve&target=pve
+2024/08/21 13:48:41 <<<<<<<<<< RESULT:
+HTTP/1.1 403 Permission check failed (pool 'pve' does not exist)
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:48:41 GMT
+Expires: Wed, 21 Aug 2024 20:48:41 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+[90mWed, 21 Aug 2024 13:49:13 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:49:13 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:49:15 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:49:15 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:49:17 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:49:17 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:49:17 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+2024/08/21 13:49:17 [DEBUG] setting computed for "smbios" from ComputedKeys
+[90mWed, 21 Aug 2024 13:49:17 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:850[0m[36m >[0m [1mVM creation[0m [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+[90mWed, 21 Aug 2024 13:49:17 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:851[0m[36m >[0m VM creation resource data: '' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:49:17 [DEBUG][QemuVmCreate] checking for duplicate name: terraform-test-vm
+2024/08/21 13:49:17 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:49:17 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:49:17 GMT
+Expires: Wed, 21 Aug 2024 20:49:17 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxmem":2147483648,"diskwrite":0,"type":"qemu","netout":0,"maxcpu":2,"maxdisk":3758096384,"diskread":0,"disk":0,"cpu":0,"vmid":8000,"template":1,"netin":0,"uptime":0,"node":"pve","id":"qemu/8000","mem":0,"status":"stopped","name":"ubuntu-cloud"}]}
+2024/08/21 13:49:17 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:49:17 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:49:17 GMT
+Expires: Wed, 21 Aug 2024 20:49:17 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/08/21 13:49:17 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:49:17 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:49:17 GMT
+Expires: Wed, 21 Aug 2024 20:49:17 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"uptime":0,"node":"pve","netin":0,"name":"ubuntu-cloud","mem":0,"status":"stopped","id":"qemu/8000","maxcpu":2,"maxdisk":3758096384,"type":"qemu","netout":0,"maxmem":2147483648,"diskwrite":0,"vmid":8000,"template":1,"disk":0,"diskread":0,"cpu":0}]}
+2024/08/21 13:49:17 [DEBUG][QemuVmCreate] cloning VM
+[90mWed, 21 Aug 2024 13:49:17 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1005[0m[36m >[0m Cloning VM [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:49:17 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/qemu/8000/clone HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 63
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+full=1&name=terraform-test-vm&newid=100&pool=colegio&target=pve
+2024/08/21 13:49:17 <<<<<<<<<< RESULT:
+HTTP/1.1 403 Permission check failed (pool 'colegio' does not exist)
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:49:17 GMT
+Expires: Wed, 21 Aug 2024 20:49:17 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+[90mWed, 21 Aug 2024 13:50:27 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:50:27 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:50:28 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:50:28 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:50:28 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+2024/08/21 13:50:28 [DEBUG] setting computed for "smbios" from ComputedKeys
+[90mWed, 21 Aug 2024 13:50:28 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:850[0m[36m >[0m [1mVM creation[0m [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+[90mWed, 21 Aug 2024 13:50:28 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:851[0m[36m >[0m VM creation resource data: '' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:50:28 [DEBUG][QemuVmCreate] checking for duplicate name: terraform-test-vm
+2024/08/21 13:50:28 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:28 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:29 GMT
+Expires: Wed, 21 Aug 2024 20:50:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxmem":2147483648,"diskwrite":0,"type":"qemu","netout":0,"maxdisk":3758096384,"maxcpu":2,"cpu":0,"diskread":0,"disk":0,"vmid":8000,"template":1,"netin":0,"uptime":0,"node":"pve","id":"qemu/8000","mem":0,"status":"stopped","name":"ubuntu-cloud"}]}
+2024/08/21 13:50:28 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:28 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:29 GMT
+Expires: Wed, 21 Aug 2024 20:50:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/08/21 13:50:28 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:28 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:29 GMT
+Expires: Wed, 21 Aug 2024 20:50:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxcpu":2,"maxdisk":3758096384,"netout":0,"type":"qemu","maxmem":2147483648,"diskwrite":0,"template":1,"vmid":8000,"diskread":0,"cpu":0,"disk":0,"uptime":0,"node":"pve","netin":0,"name":"ubuntu-cloud","status":"stopped","mem":0,"id":"qemu/8000"}]}
+2024/08/21 13:50:28 [DEBUG][QemuVmCreate] cloning VM
+[90mWed, 21 Aug 2024 13:50:28 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1005[0m[36m >[0m Cloning VM [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:50:28 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/qemu/8000/clone HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 62
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+full=1&name=terraform-test-vm&newid=100&pool=closed&target=pve
+2024/08/21 13:50:28 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 94
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:29 GMT
+Expires: Wed, 21 Aug 2024 20:50:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve:0006F55A:0103FFB9:66C65315:qmclone:8000:terraform-prov@pve!terraform-prov:"}
+2024/08/21 13:50:28 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F55A:0103FFB9:66C65315:qmclone:8000:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:29 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 273
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:29 GMT
+Expires: Wed, 21 Aug 2024 20:50:29 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"tokenid":"terraform-prov","starttime":1724273429,"upid":"UPID:pve:0006F55A:0103FFB9:66C65315:qmclone:8000:terraform-prov@pve!terraform-prov:","user":"terraform-prov@pve","status":"running","type":"qmclone","id":"8000","node":"pve","pid":456026,"pstart":17039289}}
+2024/08/21 13:50:31 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F55A:0103FFB9:66C65315:qmclone:8000:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:31 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 273
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:31 GMT
+Expires: Wed, 21 Aug 2024 20:50:31 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"type":"qmclone","status":"running","user":"terraform-prov@pve","upid":"UPID:pve:0006F55A:0103FFB9:66C65315:qmclone:8000:terraform-prov@pve!terraform-prov:","starttime":1724273429,"tokenid":"terraform-prov","pid":456026,"pstart":17039289,"node":"pve","id":"8000"}}
+2024/08/21 13:50:33 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F55A:0103FFB9:66C65315:qmclone:8000:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:33 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 291
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:33 GMT
+Expires: Wed, 21 Aug 2024 20:50:33 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"status":"stopped","user":"terraform-prov@pve","type":"qmclone","upid":"UPID:pve:0006F55A:0103FFB9:66C65315:qmclone:8000:terraform-prov@pve!terraform-prov:","starttime":1724273429,"tokenid":"terraform-prov","exitstatus":"OK","node":"pve","pid":456026,"pstart":17039289,"id":"8000"}}
+2024/08/21 13:50:43 [DEBUG][QemuVmCreate] update VM after clone
+2024/08/21 13:50:43 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:43 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 504
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:43 GMT
+Expires: Wed, 21 Aug 2024 20:50:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"vga":"serial0","net0":"virtio=BC:24:11:C7:95:34,bridge=vmbr0","scsi0":"local-lvm:vm-100-disk-0,size=3584M","memory":"2048","ide2":"local-lvm:vm-100-cloudinit,media=cdrom,size=4M","meta":"creation-qemu=8.1.5,ctime=1724105139","vmgenid":"56144058-73b6-40f0-9ca1-8ee4a4a128dd","smbios1":"uuid=f2660345-e9ba-4272-972c-f4ef174ec164","serial0":"socket","name":"terraform-test-vm","cores":2,"digest":"b7f3b8fdfb743581ae47bd3126e097c4cceeab7c","bootdisk":"scsi0","scsihw":"virtio-scsi-pci","boot":"c"}}
+2024/08/21 13:50:43 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:43 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:43 GMT
+Expires: Wed, 21 Aug 2024 20:50:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"netin":0,"uptime":0,"node":"pve","id":"qemu/100","mem":0,"status":"stopped","name":"terraform-test-vm","diskwrite":0,"maxmem":2147483648,"type":"qemu","netout":0,"maxdisk":3758096384,"maxcpu":2,"diskread":0,"disk":0,"cpu":0,"vmid":100,"template":0},{"maxdisk":3758096384,"maxcpu":2,"diskwrite":0,"maxmem":2147483648,"type":"qemu","netout":0,"template":1,"vmid":8000,"diskread":0,"disk":0,"cpu":0,"uptime":0,"node":"pve","netin":0,"mem":0,"status":"stopped","name":"ubuntu-cloud","id":"qemu/8000"}]}
+2024/08/21 13:50:43 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/100 HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:43 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'vm:100'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:43 GMT
+Expires: Wed, 21 Aug 2024 20:50:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/08/21 13:50:43 >>>>>>>>>> REQUEST:
+GET /api2/json/version HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:43 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 72
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:43 GMT
+Expires: Wed, 21 Aug 2024 20:50:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"repoid":"9355359cd7afbae4","version":"8.2.2","release":"8.2"}}
+2024/08/21 13:50:43 >>>>>>>>>> REQUEST:
+PUT /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 11
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+delete=ide2
+2024/08/21 13:50:43 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 13
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:43 GMT
+Expires: Wed, 21 Aug 2024 20:50:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/08/21 13:50:43 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/pending HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:43 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 672
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:43 GMT
+Expires: Wed, 21 Aug 2024 20:50:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"value":2,"key":"cores"},{"key":"bootdisk","value":"scsi0"},{"value":"6563d76e524cab45d2ee92ca75f5b2ce01d22c2f","key":"digest"},{"value":"virtio-scsi-pci","key":"scsihw"},{"key":"boot","value":"c"},{"key":"vmgenid","value":"56144058-73b6-40f0-9ca1-8ee4a4a128dd"},{"key":"meta","value":"creation-qemu=8.1.5,ctime=1724105139"},{"value":"uuid=f2660345-e9ba-4272-972c-f4ef174ec164","key":"smbios1"},{"value":"socket","key":"serial0"},{"value":"terraform-test-vm","key":"name"},{"value":"local-lvm:vm-100-disk-0,size=3584M","key":"scsi0"},{"key":"memory","value":"2048"},{"value":"serial0","key":"vga"},{"value":"virtio=BC:24:11:C7:95:34,bridge=vmbr0","key":"net0"}]}
+2024/08/21 13:50:43 >>>>>>>>>> REQUEST:
+PUT /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 653
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+agent=1&bios=seabios&boot=order%3Dvirtio0&cores=2&cpu=host&delete=ide2%2Cscsi0&description=A+test+for+using+terraform+and+cloudinit&hotplug=network%2Cdisk%2Cusb&ide3=local-lvm%3Acloudinit%2Cformat%3Draw&ipconfig0=ip%3D192.168.10.20%2F24%2Cgw%3D192.168.10.1&kvm=1&memory=2048&name=terraform-test-vm&net0=virtio%3D82%3A5D%3A0F%3AD4%3A0C%3A79%2Cbridge%3Dvmbr0%2Ctag%3D256&numa=0&onboot=0&protection=0&scsihw=lsi&sockets=1&sshkeys=%2520%2520%2520%2520ssh-rsa%25209182739187293817293817293871%253D%253D%2520user%2540pc%250A%250A&tablet=1&virtio0=ceph-storage-pool%3A32%2Ccache%3Dwriteback%2Cdiscard%3Don%2Cformat%3Draw%2Ciothread%3D1%2Creplicate%3D0&vmid=100
+2024/08/21 13:50:43 <<<<<<<<<< RESULT:
+HTTP/1.1 500 SSH public key validation error
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:43 GMT
+Expires: Wed, 21 Aug 2024 20:50:43 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1385[0m[36m >[0m [1mReading configuration for vmid[0m [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+2024/08/21 13:50:58 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:58 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:58 GMT
+Expires: Wed, 21 Aug 2024 20:50:58 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"status":"stopped","mem":0,"name":"terraform-test-vm","id":"qemu/100","uptime":0,"node":"pve","netin":0,"vmid":100,"template":0,"diskread":0,"disk":0,"cpu":0,"maxcpu":2,"maxdisk":3758096384,"diskwrite":0,"maxmem":2147483648,"netout":0,"type":"qemu"},{"netout":0,"type":"qemu","diskwrite":0,"maxmem":2147483648,"maxdisk":3758096384,"maxcpu":2,"diskread":0,"disk":0,"cpu":0,"template":1,"vmid":8000,"netin":0,"uptime":0,"node":"pve","id":"qemu/8000","name":"ubuntu-cloud","status":"stopped","mem":0}]}
+2024/08/21 13:50:58 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:58 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 448
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:58 GMT
+Expires: Wed, 21 Aug 2024 20:50:58 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"scsi0":"local-lvm:vm-100-disk-0,size=3584M","memory":"2048","net0":"virtio=BC:24:11:C7:95:34,bridge=vmbr0","vga":"serial0","boot":"c","scsihw":"virtio-scsi-pci","bootdisk":"scsi0","digest":"6563d76e524cab45d2ee92ca75f5b2ce01d22c2f","cores":2,"name":"terraform-test-vm","serial0":"socket","smbios1":"uuid=f2660345-e9ba-4272-972c-f4ef174ec164","vmgenid":"56144058-73b6-40f0-9ca1-8ee4a4a128dd","meta":"creation-qemu=8.1.5,ctime=1724105139"}}
+2024/08/21 13:50:58 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:58 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:58 GMT
+Expires: Wed, 21 Aug 2024 20:50:58 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxcpu":2,"maxdisk":3758096384,"diskwrite":0,"maxmem":2147483648,"netout":0,"type":"qemu","vmid":100,"template":0,"diskread":0,"cpu":0,"disk":0,"uptime":0,"node":"pve","netin":0,"status":"stopped","mem":0,"name":"terraform-test-vm","id":"qemu/100"},{"uptime":0,"node":"pve","netin":0,"mem":0,"status":"stopped","name":"ubuntu-cloud","id":"qemu/8000","maxdisk":3758096384,"maxcpu":2,"maxmem":2147483648,"diskwrite":0,"type":"qemu","netout":0,"vmid":8000,"template":1,"disk":0,"diskread":0,"cpu":0}]}
+2024/08/21 13:50:58 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/100 HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:58 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'vm:100'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:58 GMT
+Expires: Wed, 21 Aug 2024 20:50:58 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/08/21 13:50:58 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/status/current HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:50:58 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 270
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:50:58 GMT
+Expires: Wed, 21 Aug 2024 20:50:58 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"vmid":100,"ha":{"managed":0},"diskread":0,"netout":0,"maxmem":2147483648,"mem":0,"diskwrite":0,"disk":0,"status":"stopped","netin":0,"name":"terraform-test-vm","cpus":2,"uptime":0,"cpu":0,"clipboard":null,"qmpstatus":"stopped","serial":1,"maxdisk":3758096384}}
+2024/08/21 13:50:58 [DEBUG] VM status: stopped
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1454[0m[36m >[0m [READ] Received Config from Proxmox API: {"bios":"seabios","boot":"c","bootdisk":"scsi0","disks":{"scsi":{"0":{"disk":{"backup":true,"bandwidth":{"mbps":{"read":{},"write":{}},"iops":{"read":{},"write":{}}},"discard":false,"emulatessd":false,"format":"raw","id":0,"iothread":false,"linked":null,"readonly":false,"replicate":true,"size":3670016,"storage":"local-lvm","wwn":""}}}},"hotplug":"network,disk,usb","memory":2048,"name":"terraform-test-vm","node":"pve","onboot":true,"pool":"","protection":false,"cores":2,"cpu":"host","kvm":true,"network":{"0":{"bridge":"vmbr0","id":0,"macaddr":"BC:24:11:C7:95:34","model":"virtio"}},"ostype":"other","serial":{"0":{"id":0,"type":"socket"}},"sockets":1,"vga":{"":null},"scsihw":"virtio-scsi-pci","smbios1":"uuid=f2660345-e9ba-4272-972c-f4ef174ec164","tablet":true,"vmid":100} [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1520[0m[36m >[0m key 'force_create' is set to false [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1520[0m[36m >[0m key 'define_connection_info' is set to true [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1530[0m[36m >[0m Hostpci Block Processed 'map[]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1537[0m[36m >[0m Usb Block Processed 'map[]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1544[0m[36m >[0m Unused Disk Block Processed 'map[]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1558[0m[36m >[0m Analyzing Network blocks  [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1560[0m[36m >[0m Network block received 'map[bridge:vmbr0 id:0 macaddr:BC:24:11:C7:95:34 model:virtio]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1595[0m[36m >[0m VM Net Config 'map[0:map[bridge:vmbr0 id:0 macaddr:BC:24:11:C7:95:34 model:virtio tag:-1]]' from '[map[bridge:vmbr0 macaddr:BC:24:11:C7:95:34 model:virtio tag:-1]]' set as '[map[bridge:vmbr0 firewall:false link_down:false macaddr:BC:24:11:C7:95:34 model:virtio mtu:0 queues:0 rate:0 tag:-1]]' type of 'string' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:58 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1597[0m[36m >[0m Finished VM read resulting in data: '' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:50:59 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:50:59 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:51:00 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:51:00 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:51:00 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:00 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:00 GMT
+Expires: Wed, 21 Aug 2024 20:51:00 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxdisk":3758096384,"maxcpu":2,"netout":0,"type":"qemu","diskwrite":0,"maxmem":2147483648,"vmid":100,"template":0,"disk":0,"diskread":0,"cpu":0,"node":"pve","uptime":0,"netin":0,"name":"terraform-test-vm","status":"stopped","mem":0,"id":"qemu/100"},{"netin":0,"uptime":0,"node":"pve","id":"qemu/8000","name":"ubuntu-cloud","status":"stopped","mem":0,"netout":0,"type":"qemu","diskwrite":0,"maxmem":2147483648,"maxdisk":3758096384,"maxcpu":2,"disk":0,"diskread":0,"cpu":0,"template":1,"vmid":8000}]}
+2024/08/21 13:51:00 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/status/current HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:00 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 270
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:00 GMT
+Expires: Wed, 21 Aug 2024 20:51:00 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"uptime":0,"cpus":2,"name":"terraform-test-vm","maxdisk":3758096384,"serial":1,"qmpstatus":"stopped","clipboard":null,"cpu":0,"netout":0,"diskread":0,"ha":{"managed":0},"vmid":100,"netin":0,"mem":0,"disk":0,"diskwrite":0,"status":"stopped","maxmem":2147483648}}
+2024/08/21 13:51:00 >>>>>>>>>> REQUEST:
+DELETE /api2/json/nodes/pve/qemu/100 HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:00 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 95
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:00 GMT
+Expires: Wed, 21 Aug 2024 20:51:00 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve:0006F5FF:01040C31:66C65334:qmdestroy:100:terraform-prov@pve!terraform-prov:"}
+2024/08/21 13:51:00 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F5FF:01040C31:66C65334:qmdestroy:100:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:00 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 275
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:00 GMT
+Expires: Wed, 21 Aug 2024 20:51:00 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:0006F5FF:01040C31:66C65334:qmdestroy:100:terraform-prov@pve!terraform-prov:","status":"running","user":"terraform-prov@pve","type":"qmdestroy","tokenid":"terraform-prov","starttime":1724273460,"id":"100","node":"pve","pid":456191,"pstart":17042481}}
+2024/08/21 13:51:02 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F5FF:01040C31:66C65334:qmdestroy:100:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:02 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 293
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:03 GMT
+Expires: Wed, 21 Aug 2024 20:51:03 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"100","pid":456191,"pstart":17042481,"node":"pve","upid":"UPID:pve:0006F5FF:01040C31:66C65334:qmdestroy:100:terraform-prov@pve!terraform-prov:","type":"qmdestroy","user":"terraform-prov@pve","status":"stopped","exitstatus":"OK","tokenid":"terraform-prov","starttime":1724273460}}
+[90mWed, 21 Aug 2024 13:51:07 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:51:07 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:51:10 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:51:10 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:51:10 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+2024/08/21 13:51:10 [DEBUG] setting computed for "smbios" from ComputedKeys
+[90mWed, 21 Aug 2024 13:51:10 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:850[0m[36m >[0m [1mVM creation[0m [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+[90mWed, 21 Aug 2024 13:51:10 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:851[0m[36m >[0m VM creation resource data: '' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:51:10 [DEBUG][QemuVmCreate] checking for duplicate name: terraform-test-vm
+2024/08/21 13:51:10 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:10 GMT
+Expires: Wed, 21 Aug 2024 20:51:10 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxdisk":3758096384,"maxcpu":2,"diskwrite":0,"maxmem":2147483648,"type":"qemu","netout":0,"vmid":8000,"template":1,"diskread":0,"disk":0,"cpu":0,"uptime":0,"node":"pve","netin":0,"mem":0,"status":"stopped","name":"ubuntu-cloud","id":"qemu/8000"}]}
+2024/08/21 13:51:10 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:10 GMT
+Expires: Wed, 21 Aug 2024 20:51:10 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/08/21 13:51:10 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:10 GMT
+Expires: Wed, 21 Aug 2024 20:51:10 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"name":"ubuntu-cloud","mem":0,"status":"stopped","id":"qemu/8000","uptime":0,"node":"pve","netin":0,"template":1,"vmid":8000,"diskread":0,"cpu":0,"disk":0,"maxcpu":2,"maxdisk":3758096384,"type":"qemu","netout":0,"maxmem":2147483648,"diskwrite":0}]}
+2024/08/21 13:51:10 [DEBUG][QemuVmCreate] cloning VM
+[90mWed, 21 Aug 2024 13:51:10 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1005[0m[36m >[0m Cloning VM [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/08/21 13:51:10 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve/qemu/8000/clone HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 62
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+full=1&name=terraform-test-vm&newid=100&pool=closed&target=pve
+2024/08/21 13:51:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 94
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:10 GMT
+Expires: Wed, 21 Aug 2024 20:51:10 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve:0006F611:01040FCF:66C6533E:qmclone:8000:terraform-prov@pve!terraform-prov:"}
+2024/08/21 13:51:10 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F611:01040FCF:66C6533E:qmclone:8000:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:10 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 273
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:10 GMT
+Expires: Wed, 21 Aug 2024 20:51:10 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"8000","node":"pve","pid":456209,"pstart":17043407,"tokenid":"terraform-prov","starttime":1724273470,"upid":"UPID:pve:0006F611:01040FCF:66C6533E:qmclone:8000:terraform-prov@pve!terraform-prov:","user":"terraform-prov@pve","status":"running","type":"qmclone"}}
+2024/08/21 13:51:12 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F611:01040FCF:66C6533E:qmclone:8000:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:12 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 273
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:12 GMT
+Expires: Wed, 21 Aug 2024 20:51:12 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"pstart":17043407,"pid":456209,"node":"pve","id":"8000","type":"qmclone","user":"terraform-prov@pve","status":"running","upid":"UPID:pve:0006F611:01040FCF:66C6533E:qmclone:8000:terraform-prov@pve!terraform-prov:","starttime":1724273470,"tokenid":"terraform-prov"}}
+2024/08/21 13:51:14 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F611:01040FCF:66C6533E:qmclone:8000:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:14 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 291
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:14 GMT
+Expires: Wed, 21 Aug 2024 20:51:14 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"upid":"UPID:pve:0006F611:01040FCF:66C6533E:qmclone:8000:terraform-prov@pve!terraform-prov:","user":"terraform-prov@pve","status":"stopped","type":"qmclone","tokenid":"terraform-prov","exitstatus":"OK","starttime":1724273470,"id":"8000","node":"pve","pstart":17043407,"pid":456209}}
+2024/08/21 13:51:24 [DEBUG][QemuVmCreate] update VM after clone
+2024/08/21 13:51:24 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:24 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 504
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:24 GMT
+Expires: Wed, 21 Aug 2024 20:51:24 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"net0":"virtio=BC:24:11:91:A5:D4,bridge=vmbr0","vga":"serial0","memory":"2048","scsi0":"local-lvm:vm-100-disk-0,size=3584M","name":"terraform-test-vm","meta":"creation-qemu=8.1.5,ctime=1724105139","ide2":"local-lvm:vm-100-cloudinit,media=cdrom,size=4M","vmgenid":"65745b3f-1a25-4cd1-a924-099ce23d9450","smbios1":"uuid=b7706ab3-5dbd-4925-9ead-ada6ee234b40","serial0":"socket","bootdisk":"scsi0","digest":"188d7ce69f5e990d056a6d643a8fa98160b7b7b9","cores":2,"boot":"c","scsihw":"virtio-scsi-pci"}}
+2024/08/21 13:51:24 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:24 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:24 GMT
+Expires: Wed, 21 Aug 2024 20:51:24 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"maxmem":2147483648,"diskwrite":0,"netout":0,"type":"qemu","maxdisk":3758096384,"maxcpu":2,"diskread":0,"disk":0,"cpu":0,"vmid":100,"template":0,"netin":0,"uptime":0,"node":"pve","id":"qemu/100","status":"stopped","mem":0,"name":"terraform-test-vm"},{"template":1,"vmid":8000,"disk":0,"diskread":0,"cpu":0,"maxdisk":3758096384,"maxcpu":2,"netout":0,"type":"qemu","diskwrite":0,"maxmem":2147483648,"name":"ubuntu-cloud","status":"stopped","mem":0,"id":"qemu/8000","uptime":0,"node":"pve","netin":0}]}
+2024/08/21 13:51:24 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/100 HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:24 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'vm:100'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:24 GMT
+Expires: Wed, 21 Aug 2024 20:51:24 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/08/21 13:51:24 >>>>>>>>>> REQUEST:
+GET /api2/json/version HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:24 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 72
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:24 GMT
+Expires: Wed, 21 Aug 2024 20:51:24 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"repoid":"9355359cd7afbae4","version":"8.2.2","release":"8.2"}}
+2024/08/21 13:51:24 >>>>>>>>>> REQUEST:
+PUT /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 11
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+delete=ide2
+2024/08/21 13:51:24 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 13
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:24 GMT
+Expires: Wed, 21 Aug 2024 20:51:24 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/08/21 13:51:24 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/pending HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:24 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 672
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:24 GMT
+Expires: Wed, 21 Aug 2024 20:51:24 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"value":"uuid=b7706ab3-5dbd-4925-9ead-ada6ee234b40","key":"smbios1"},{"key":"serial0","value":"socket"},{"key":"vmgenid","value":"65745b3f-1a25-4cd1-a924-099ce23d9450"},{"key":"meta","value":"creation-qemu=8.1.5,ctime=1724105139"},{"value":"terraform-test-vm","key":"name"},{"key":"scsihw","value":"virtio-scsi-pci"},{"key":"boot","value":"c"},{"value":2,"key":"cores"},{"value":"scsi0","key":"bootdisk"},{"value":"5627580305df5fee70f5f15154b56175f5d27106","key":"digest"},{"value":"serial0","key":"vga"},{"value":"virtio=BC:24:11:91:A5:D4,bridge=vmbr0","key":"net0"},{"key":"scsi0","value":"local-lvm:vm-100-disk-0,size=3584M"},{"value":"2048","key":"memory"}]}
+2024/08/21 13:51:24 >>>>>>>>>> REQUEST:
+PUT /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 653
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+agent=1&bios=seabios&boot=order%3Dvirtio0&cores=2&cpu=host&delete=ide2%2Cscsi0&description=A+test+for+using+terraform+and+cloudinit&hotplug=network%2Cdisk%2Cusb&ide3=local-lvm%3Acloudinit%2Cformat%3Draw&ipconfig0=ip%3D192.168.10.20%2F24%2Cgw%3D192.168.10.1&kvm=1&memory=2048&name=terraform-test-vm&net0=virtio%3D66%3A86%3AB9%3AB1%3AB9%3AEC%2Cbridge%3Dvmbr0%2Ctag%3D256&numa=0&onboot=0&protection=0&scsihw=lsi&sockets=1&sshkeys=%2520%2520%2520%2520ssh-rsa%25209182739187293817293817293871%253D%253D%2520user%2540pc%250A%250A&tablet=1&virtio0=ceph-storage-pool%3A32%2Ccache%3Dwriteback%2Cdiscard%3Don%2Cformat%3Draw%2Ciothread%3D1%2Creplicate%3D0&vmid=100
+2024/08/21 13:51:24 <<<<<<<<<< RESULT:
+HTTP/1.1 500 SSH public key validation error
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:24 GMT
+Expires: Wed, 21 Aug 2024 20:51:24 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1385[0m[36m >[0m [1mReading configuration for vmid[0m [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+2024/08/21 13:51:44 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:44 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:44 GMT
+Expires: Wed, 21 Aug 2024 20:51:44 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"diskread":0,"cpu":0,"disk":0,"template":0,"vmid":100,"maxmem":2147483648,"diskwrite":0,"netout":0,"type":"qemu","maxdisk":3758096384,"maxcpu":2,"id":"qemu/100","status":"stopped","mem":0,"name":"terraform-test-vm","netin":0,"uptime":0,"node":"pve"},{"name":"ubuntu-cloud","mem":0,"status":"stopped","id":"qemu/8000","node":"pve","uptime":0,"netin":0,"template":1,"vmid":8000,"diskread":0,"cpu":0,"disk":0,"maxcpu":2,"maxdisk":3758096384,"type":"qemu","netout":0,"diskwrite":0,"maxmem":2147483648}]}
+2024/08/21 13:51:44 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/config HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:44 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 448
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:44 GMT
+Expires: Wed, 21 Aug 2024 20:51:44 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"boot":"c","scsihw":"virtio-scsi-pci","digest":"5627580305df5fee70f5f15154b56175f5d27106","bootdisk":"scsi0","cores":2,"name":"terraform-test-vm","vmgenid":"65745b3f-1a25-4cd1-a924-099ce23d9450","meta":"creation-qemu=8.1.5,ctime=1724105139","smbios1":"uuid=b7706ab3-5dbd-4925-9ead-ada6ee234b40","serial0":"socket","scsi0":"local-lvm:vm-100-disk-0,size=3584M","memory":"2048","net0":"virtio=BC:24:11:91:A5:D4,bridge=vmbr0","vga":"serial0"}}
+2024/08/21 13:51:44 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:44 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:44 GMT
+Expires: Wed, 21 Aug 2024 20:51:44 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"id":"qemu/100","mem":0,"status":"stopped","name":"terraform-test-vm","netin":0,"uptime":0,"node":"pve","disk":0,"diskread":0,"cpu":0,"template":0,"vmid":100,"maxmem":2147483648,"diskwrite":0,"type":"qemu","netout":0,"maxcpu":2,"maxdisk":3758096384},{"maxdisk":3758096384,"maxcpu":2,"maxmem":2147483648,"diskwrite":0,"type":"qemu","netout":0,"vmid":8000,"template":1,"cpu":0,"diskread":0,"disk":0,"uptime":0,"node":"pve","netin":0,"mem":0,"status":"stopped","name":"ubuntu-cloud","id":"qemu/8000"}]}
+2024/08/21 13:51:44 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/ha/resources/100 HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:44 <<<<<<<<<< RESULT:
+HTTP/1.1 500 no such resource 'vm:100'
+Connection: close
+Content-Length: 13
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:44 GMT
+Expires: Wed, 21 Aug 2024 20:51:44 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":null}
+2024/08/21 13:51:44 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/status/current HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:44 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 270
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:44 GMT
+Expires: Wed, 21 Aug 2024 20:51:44 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"name":"terraform-test-vm","cpus":2,"uptime":0,"qmpstatus":"stopped","cpu":0,"clipboard":null,"maxdisk":3758096384,"serial":1,"ha":{"managed":0},"vmid":100,"netout":0,"diskread":0,"mem":0,"status":"stopped","diskwrite":0,"disk":0,"maxmem":2147483648,"netin":0}}
+2024/08/21 13:51:44 [DEBUG] VM status: stopped
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1454[0m[36m >[0m [READ] Received Config from Proxmox API: {"bios":"seabios","boot":"c","bootdisk":"scsi0","disks":{"scsi":{"0":{"disk":{"backup":true,"bandwidth":{"mbps":{"read":{},"write":{}},"iops":{"read":{},"write":{}}},"discard":false,"emulatessd":false,"format":"raw","id":0,"iothread":false,"linked":null,"readonly":false,"replicate":true,"size":3670016,"storage":"local-lvm","wwn":""}}}},"hotplug":"network,disk,usb","memory":2048,"name":"terraform-test-vm","node":"pve","onboot":true,"pool":"","protection":false,"cores":2,"cpu":"host","kvm":true,"network":{"0":{"bridge":"vmbr0","id":0,"macaddr":"BC:24:11:91:A5:D4","model":"virtio"}},"ostype":"other","serial":{"0":{"id":0,"type":"socket"}},"sockets":1,"vga":{"":null},"scsihw":"virtio-scsi-pci","smbios1":"uuid=b7706ab3-5dbd-4925-9ead-ada6ee234b40","tablet":true,"vmid":100} [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1520[0m[36m >[0m key 'force_create' is set to false [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1520[0m[36m >[0m key 'define_connection_info' is set to true [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1530[0m[36m >[0m Hostpci Block Processed 'map[]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1537[0m[36m >[0m Usb Block Processed 'map[]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1544[0m[36m >[0m Unused Disk Block Processed 'map[]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1558[0m[36m >[0m Analyzing Network blocks  [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1560[0m[36m >[0m Network block received 'map[bridge:vmbr0 id:0 macaddr:BC:24:11:91:A5:D4 model:virtio]' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1595[0m[36m >[0m VM Net Config 'map[0:map[bridge:vmbr0 id:0 macaddr:BC:24:11:91:A5:D4 model:virtio tag:-1]]' from '[map[bridge:vmbr0 macaddr:BC:24:11:91:A5:D4 model:virtio tag:-1]]' set as '[map[bridge:vmbr0 firewall:false link_down:false macaddr:BC:24:11:91:A5:D4 model:virtio mtu:0 queues:0 rate:0 tag:-1]]' type of 'string' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m DBG [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/resource_vm_qemu.go:1597[0m[36m >[0m Finished VM read resulting in data: '' [36mloggerName=[0mresource_vm_read [36mvmid=[0m100
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:51:44 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+[90mWed, 21 Aug 2024 13:51:46 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:51:46 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m
+2024/08/21 13:51:47 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:47 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 509
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:47 GMT
+Expires: Wed, 21 Aug 2024 20:51:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"node":"pve","uptime":0,"netin":0,"status":"stopped","mem":0,"name":"terraform-test-vm","id":"qemu/100","maxdisk":3758096384,"maxcpu":2,"diskwrite":0,"maxmem":2147483648,"netout":0,"type":"qemu","template":0,"vmid":100,"disk":0,"diskread":0,"cpu":0},{"netin":0,"uptime":0,"node":"pve","id":"qemu/8000","name":"ubuntu-cloud","mem":0,"status":"stopped","type":"qemu","netout":0,"diskwrite":0,"maxmem":2147483648,"maxdisk":3758096384,"maxcpu":2,"disk":0,"diskread":0,"cpu":0,"vmid":8000,"template":1}]}
+2024/08/21 13:51:47 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/qemu/100/status/current HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:47 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 270
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:47 GMT
+Expires: Wed, 21 Aug 2024 20:51:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"netin":0,"maxmem":2147483648,"diskwrite":0,"disk":0,"status":"stopped","mem":0,"diskread":0,"netout":0,"vmid":100,"ha":{"managed":0},"serial":1,"maxdisk":3758096384,"clipboard":null,"cpu":0,"qmpstatus":"stopped","cpus":2,"uptime":0,"name":"terraform-test-vm"}}
+2024/08/21 13:51:47 >>>>>>>>>> REQUEST:
+DELETE /api2/json/nodes/pve/qemu/100 HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:47 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 95
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:47 GMT
+Expires: Wed, 21 Aug 2024 20:51:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve:0006F6B2:01041E3F:66C65363:qmdestroy:100:terraform-prov@pve!terraform-prov:"}
+2024/08/21 13:51:47 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F6B2:01041E3F:66C65363:qmdestroy:100:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:47 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 275
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:47 GMT
+Expires: Wed, 21 Aug 2024 20:51:47 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"pid":456370,"pstart":17047103,"node":"pve","id":"100","type":"qmdestroy","user":"terraform-prov@pve","status":"running","upid":"UPID:pve:0006F6B2:01041E3F:66C65363:qmdestroy:100:terraform-prov@pve!terraform-prov:","starttime":1724273507,"tokenid":"terraform-prov"}}
+2024/08/21 13:51:49 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve/tasks/UPID:pve:0006F6B2:01041E3F:66C65363:qmdestroy:100:terraform-prov@pve!terraform-prov:/status HTTP/1.1
+Host: pve.badger-morray.ts.net:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=terraform-prov@pve!terraform-prov=532de195-7353-4cf7-9b85-c55ff30985f6
+Accept-Encoding: gzip
+
+2024/08/21 13:51:49 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 293
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Wed, 21 Aug 2024 20:51:49 GMT
+Expires: Wed, 21 Aug 2024 20:51:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"exitstatus":"OK","tokenid":"terraform-prov","starttime":1724273507,"upid":"UPID:pve:0006F6B2:01041E3F:66C65363:qmdestroy:100:terraform-prov@pve!terraform-prov:","type":"qmdestroy","user":"terraform-prov@pve","status":"stopped","id":"100","pstart":17047103,"pid":456370,"node":"pve"}}
