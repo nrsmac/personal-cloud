@@ -1434,3 +1434,5 @@ Pragma: no-cache
 Server: pve-api-daemon/3.0
 
 {"data":{"exitstatus":"OK","tokenid":"terraform-prov","starttime":1724273507,"upid":"UPID:pve:0006F6B2:01041E3F:66C65363:qmdestroy:100:terraform-prov@pve!terraform-prov:","type":"qmdestroy","user":"terraform-prov@pve","status":"stopped","id":"100","pstart":17047103,"pid":456370,"node":"pve"}}
+[90mWed, 21 Aug 2024 13:56:22 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:157[0m[36m >[0m [1mEnabling the capture of log-library logs as ithe _capturelog flag was detected[0m
+[90mWed, 21 Aug 2024 13:56:22 -0700[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/v2/proxmox/util.go:190[0m[36m >[0m [1mLogging Started. Root Logger Set to level debug[0m

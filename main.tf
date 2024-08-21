@@ -83,7 +83,5 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
     ipconfig0 = "ip=192.168.10.20/24,gw=192.168.10.1"
 
     # TODO create keypair on host... silly
-    sshkeys = <<EOF
-    ssh-rsa 9182739187293817293817293871== user@pc
-    EOF
+    sshkeys = var.SSH_PUBLIC_KEY
 }
