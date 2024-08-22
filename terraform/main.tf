@@ -27,17 +27,12 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
     name = "terraform-test-vm"
     desc = "A test for using terraform and cloudinit"
 
-    # Node name has to be the same name as within the cluster
-    # this might not include the FQDN
     target_node = "pve"
 
-    # The destination resource pool for the new VM
-    pool = "closed"
+    pool = var.RESOURCE_POOL_NAME 
 
-    # The template name to clone this vm from
-    clone = "ubuntu-cloud"
+    clone = var.CLONE_TEMPLATE_NAME
 
-    # Activate QEMU agent for this VM
     agent = 1
 
     os_type = "cloud-init"
@@ -53,7 +48,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
         ide {
             ide3 {
                 cloudinit {
-                    storage = "local-lvm"
+                    storage = var.STORAGE_NAME
                 }
             }
         }
@@ -62,7 +57,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
                 disk {
                     size            = 32
                     cache           = "writeback"
-                    storage         = "ceph-storage-pool"
+                    storage         = var.STORAGE_NAME
                     iothread        = true
                     discard         = true
                 }
@@ -82,6 +77,5 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
     # Keep in mind to use the CIDR notation for the ip.
     ipconfig0 = "ip=192.168.10.20/24,gw=192.168.10.1"
 
-    # TODO create keypair on host... silly
     sshkeys = var.SSH_PUBLIC_KEY
 }
