@@ -4,3 +4,6 @@
 .terraform*
 .terraform/*
 *.log
+terraform.state
+terraform.state
+terraform.state*
