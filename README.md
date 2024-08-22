@@ -77,4 +77,4 @@ Create a new key for the terraform-prov@pve user:
   - Token ID: terraform-pro (or choose whatever works)
   - **Uncheck Priviege Separation** -- this has unfortunately been known to cause issues with the current Proxmox terraform provider
 ![Viewing the API Key list from Proxmox web interface](https://github.com/nrsmac/personal-cloud/blob/main/assets/proxmox-api-token.png?raw=true)
-Copy and save the displayed values.
+Copy the ID and secret key to `./terraform/terraform.tfvars`
