@@ -6,3 +6,4 @@
 *.log
 **.DS_Store**
 terraform/terraform.tfstate
+terraform/provider.tf
