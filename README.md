@@ -78,3 +78,15 @@ Create a new key for the terraform-prov@pve user:
   - **Uncheck Priviege Separation** -- this has unfortunately been known to cause issues with the current Proxmox terraform provider
 ![Viewing the API Key list from Proxmox web interface](https://github.com/nrsmac/personal-cloud/blob/main/assets/proxmox-api-token.png?raw=true)
 Copy the ID and secret key to `./terraform/terraform.tfvars`
+
+### Using Ansible to bootstrap K3s
+```bash
+git clone https://github.com/k3s-io/k3s-ansible.git
+```
+
+You may need to install ansible.posix:
+```bash
+ansible-galaxy collection install ansible.posix
+ansible-galaxy collection install community.general
+```
+

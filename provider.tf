@@ -2,10 +2,6 @@ terraform {
   required_version = ">= 1.7.4"
 
   required_providers {
-    # proxmox = {
-    #     source = "telmate/proxmox"
-    #     version = "3.0.1-rc3"
-    # }
     proxmox = {
         source = "bpg/proxmox"
         version = "0.63.0"
